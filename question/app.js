@@ -112,3 +112,58 @@ console.log(x);
 let x = 1
 のような宣言が無いまま、いきなり変数xを使用したのと同じ結果になります。
 */
+
+//応用編　問題
+//Q1
+let numAdvQ1 = Math.floor(Math.random() * 10);
+console.log(numAdvQ1);
+
+//Q2
+setTimeout(function(){
+  console.log('Hello World')
+}, 3000);
+
+//Q3
+let num = 0;
+if (num > 0) {
+  console.log('num is greater than 0');
+} else if (num < 0) {
+  console.log('num is less than 0');
+} else {
+  console.log('num is 0');
+}
+
+//Q4
+let numbers = [];
+let trialCount = 99;
+for (i = 0; i <= trialCount; i++) {
+  numbers[i] = i;
+}
+console.log(numbers);
+
+//Q5
+let mixed = [4, '2', 5, '8', '9', 0, 1];
+
+for (i = 0; i < mixed.length; i++) {
+  let numInMixed = 0;
+  let outputChar = '';
+  let quoteCheck = '';
+  
+  numInMixed = mixed[i];
+
+  if (typeof numInMixed === 'number'){
+
+    if (numInMixed === 0 || numInMixed % 2 === 0) {
+      outputChar = 'even';
+    } else {
+      outputChar = 'odd';
+    }
+
+  } else {
+    quoteCheck = "'";
+    outputChar = 'not number';
+  }
+
+  console.log(`${quoteCheck}${mixed[i]}${quoteCheck} => ${outputChar}`);
+};
+
