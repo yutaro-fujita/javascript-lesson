@@ -146,23 +146,17 @@ let mixed = [4, '2', 5, '8', '9', 0, 1];
 for (i = 0; i < mixed.length; i++) {
   let numInMixed = 0;
   let outputChar = '';
-  let quoteCheck = '';
-  
+
   numInMixed = mixed[i];
 
-  if (typeof numInMixed === 'number'){
-
-    if (numInMixed === 0 || numInMixed % 2 === 0) {
-      outputChar = 'even';
-    } else {
-      outputChar = 'odd';
-    }
-
-  } else {
-    quoteCheck = "'";
+  if (typeof numInMixed !== 'number') {
     outputChar = 'not number';
+  } else if (numInMixed % 2 === 0) {
+      outputChar = 'even';
+  } else {
+      outputChar = 'odd';
   }
 
-  console.log(`${quoteCheck}${mixed[i]}${quoteCheck} => ${outputChar}`);
+  console.log(outputChar);
 };
 
