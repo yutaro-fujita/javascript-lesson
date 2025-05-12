@@ -90,7 +90,6 @@ calc.divide(30, 6);
 
 //Q9
 calc.remainder = function(x, y) {
-  //console.log(x % y);
   return x % y;
 }
 let varX = 5;
